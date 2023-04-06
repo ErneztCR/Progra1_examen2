@@ -1,74 +1,65 @@
 
 package ernestovargasexamen2;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author ervargas
  */
 public class ClsEncuesta {
 
-    //atributos
-    private int numEncuesta;
-    private String nombre;
-    private int edad;
-    private String email;
-    private boolean vehiculoPropio;
-
+    // se crean arraylist para almacenar los datos de las encuestas
+    private static ArrayList<String> nombre = new ArrayList<>();
+    private static ArrayList<Integer> edad = new ArrayList<>();
+    private static ArrayList<String> email = new ArrayList<>();
+    
     //constructor
-    public ClsEncuesta(int numEncuesta, String nombre, int edad, String email, boolean vehiculoPropio) {
-        this.numEncuesta = numEncuesta;
-        this.nombre = nombre;
-        this.edad = edad;
-        this.email = email;
-        this.vehiculoPropio = vehiculoPropio;
+    public ClsEncuesta() {
+        nombre.clear();
+        edad.clear();
+        email.clear();
     }
 
-    //getters y setters
-    public int getNumEncuesta() {
-        return numEncuesta;
-    }
-
-    public void setNumEncuesta(int numEncuesta) {
-        this.numEncuesta = numEncuesta;
-    }
-
-    public String getNombre() {
+    //metodos get y set
+    public static ArrayList<String> getNombre() {
         return nombre;
     }
 
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
+    public static void setNombre(String nombre) {
+        ClsEncuesta.nombre.add(nombre);
     }
 
-    public int getEdad() {
+    public static ArrayList<Integer> getEdad() {
         return edad;
     }
 
-    public void setEdad(int edad) {
-        this.edad = edad;
+    public static void setEdad(int edad) {
+        ClsEncuesta.edad.add(edad);
     }
 
-    public String getEmail() {
+    public static ArrayList<String> getEmail() {
         return email;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
+    public static void setEmail(String email) {
+        ClsEncuesta.email.add(email);
     }
 
-    public boolean isVehiculoPropio() {
-        return vehiculoPropio;
+    //metodo para calcular la cantidad de encuestas
+    public static int cantidadEncuestas() {
+        return nombre.size();
     }
 
-    public void setVehiculoPropio(boolean vehiculoPropio) {
-        this.vehiculoPropio = vehiculoPropio;
-    }
-
-    //toString
-    @Override
-
-    public String toString() {
-        return "Encuesta{" + "numEncuesta=" + numEncuesta + ", nombre=" + nombre + ", edad=" + edad + ", email=" + email + ", vehiculoPropio=" + vehiculoPropio + '}';
+    //metodo para saber si la edad es entre 18 y 50 si es mayor a 50 o menor a 18 debe arrojar un mensaje por JOptionPane
+    public static String edad(int edad) {
+        if (edad >= 18 && edad <= 50) {
+            return "La edad esta entre 18 y 50";
+        } else if (edad > 50) {
+            return "La edad es mayor a 50";
+        } else {
+            return "La edad es menor a 18";
+        }
     }
         
 }

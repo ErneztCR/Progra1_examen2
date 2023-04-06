@@ -42,6 +42,7 @@ public class Formularios extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         jSeparator1 = new javax.swing.JSeparator();
         Bguardar = new javax.swing.JButton();
+        Bvolver = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setLocationByPlatform(true);
@@ -99,7 +100,7 @@ public class Formularios extends javax.swing.JFrame {
         getContentPane().add(jLabel2);
         jLabel2.setBounds(90, 20, 190, 50);
         getContentPane().add(jSeparator1);
-        jSeparator1.setBounds(0, 78, 350, 10);
+        jSeparator1.setBounds(0, 78, 350, 2);
 
         Bguardar.setText("Guardar informacion");
         Bguardar.addActionListener(new java.awt.event.ActionListener() {
@@ -108,7 +109,16 @@ public class Formularios extends javax.swing.JFrame {
             }
         });
         getContentPane().add(Bguardar);
-        Bguardar.setBounds(100, 360, 150, 40);
+        Bguardar.setBounds(20, 360, 170, 40);
+
+        Bvolver.setText("Volver");
+        Bvolver.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BvolverActionPerformed(evt);
+            }
+        });
+        getContentPane().add(Bvolver);
+        Bvolver.setBounds(240, 360, 80, 40);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -123,9 +133,7 @@ public class Formularios extends javax.swing.JFrame {
         contador++;
         Lnumencuesta2.setText(String.valueOf(contador));
 
-         
-
-
+        
         // se agrega un joptionpane indicando que la informacion se guardo
         JOptionPane.showMessageDialog(null, "Informacion guardada");
 
@@ -135,9 +143,13 @@ public class Formularios extends javax.swing.JFrame {
         TFemail.setText("");
         VehiculoPropio.clearSelection();
 
-        
-        
     }//GEN-LAST:event_BguardarActionPerformed
+
+    private void BvolverActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BvolverActionPerformed
+        Lobby principal = new Lobby();
+        principal.setVisible(true);
+        this.hide();
+    }//GEN-LAST:event_BvolverActionPerformed
 
     /**
      * @param args the command line arguments
@@ -177,6 +189,7 @@ public class Formularios extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton Bguardar;
+    private javax.swing.JButton Bvolver;
     private javax.swing.JLabel Lcar;
     private javax.swing.JLabel Ledad;
     private javax.swing.JLabel Lemail;

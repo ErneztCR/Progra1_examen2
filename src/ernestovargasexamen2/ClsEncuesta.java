@@ -52,9 +52,14 @@ public class ClsEncuesta {
 
     public static void setVehiculoPropio(String vehiculoPropio) {
         ClsEncuesta.vehiculoPropio.add(vehiculoPropio);
-    }       
-
+    }      
     
+    // get y set para el arraylist de persona sin vehiculo
+    public static ArrayList<String> getPersonaSinVehiculo() {
+        return personaSinVehiculo;
+    }
+
+
 
 
 
@@ -100,8 +105,8 @@ public class ClsEncuesta {
         return contador;
     }
 
-    // metodo para contar cuantas personas no tienen vehiculo propio
-    public static int vehiculoNoPropio() {
+    // metodo para contar cuantas personas no tienen vehiculo
+    public static int personaSinVehiculo() {
         int contador = 0;
         for (int i = 0; i < nombre.size(); i++) {
             if (nombre.get(i).equals("No")) {
@@ -110,5 +115,5 @@ public class ClsEncuesta {
         }
         return contador;
     }
-        
+      
 }

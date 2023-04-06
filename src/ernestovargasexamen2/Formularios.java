@@ -1,6 +1,8 @@
 
 package ernestovargasexamen2;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author ervargas
@@ -122,6 +124,18 @@ public class Formularios extends javax.swing.JFrame {
         Lnumencuesta2.setText(String.valueOf(contador));
 
          
+
+
+        // se agrega un joptionpane indicando que la informacion se guardo
+        JOptionPane.showMessageDialog(null, "Informacion guardada");
+
+        // se limpian los campos de texto
+        TFnombre.setText("");
+        TFedad.setText("");
+        TFemail.setText("");
+        VehiculoPropio.clearSelection();
+
+        
         
     }//GEN-LAST:event_BguardarActionPerformed
 

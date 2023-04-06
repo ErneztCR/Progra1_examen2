@@ -8,12 +8,12 @@ package ernestovargasexamen2;
  *
  * @author ervargas
  */
-public class Formulario extends javax.swing.JFrame {
+public class Formularios extends javax.swing.JFrame {
 
     /**
      * Creates new form Formulario
      */
-    public Formulario() {
+    public Formularios() {
         initComponents();
     }
 
@@ -27,8 +27,8 @@ public class Formulario extends javax.swing.JFrame {
     private void initComponents() {
 
         VehiculoPropio = new javax.swing.ButtonGroup();
-        jLabel1 = new javax.swing.JLabel();
         Lnumencuesta = new javax.swing.JLabel();
+        Lnumencuesta2 = new javax.swing.JLabel();
         Lnombre = new javax.swing.JLabel();
         Ledad = new javax.swing.JLabel();
         Lemail = new javax.swing.JLabel();
@@ -38,47 +38,49 @@ public class Formulario extends javax.swing.JFrame {
         TFnombre = new javax.swing.JTextField();
         TFedad = new javax.swing.JTextField();
         TFemail = new javax.swing.JTextField();
+        jLabel2 = new javax.swing.JLabel();
+        jSeparator1 = new javax.swing.JSeparator();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setLocationByPlatform(true);
-        setPreferredSize(new java.awt.Dimension(350, 300));
+        setPreferredSize(new java.awt.Dimension(350, 390));
         getContentPane().setLayout(null);
 
-        jLabel1.setText("Numero de encuesta:");
-        getContentPane().add(jLabel1);
-        jLabel1.setBounds(10, 10, 140, 30);
-
-        Lnumencuesta.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        Lnumencuesta.setText("Numero de encuesta:");
         getContentPane().add(Lnumencuesta);
-        Lnumencuesta.setBounds(160, 10, 150, 30);
+        Lnumencuesta.setBounds(20, 110, 140, 20);
+
+        Lnumencuesta2.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        getContentPane().add(Lnumencuesta2);
+        Lnumencuesta2.setBounds(170, 100, 150, 30);
 
         Lnombre.setText("Nombre:");
         getContentPane().add(Lnombre);
-        Lnombre.setBounds(10, 70, 60, 16);
+        Lnombre.setBounds(20, 160, 140, 20);
 
         Ledad.setText("Edad:");
         getContentPane().add(Ledad);
-        Ledad.setBounds(10, 120, 31, 16);
+        Ledad.setBounds(20, 210, 140, 20);
 
         Lemail.setText("Correo electronico:");
         getContentPane().add(Lemail);
-        Lemail.setBounds(10, 166, 101, 16);
+        Lemail.setBounds(20, 260, 140, 16);
 
         Lcar.setText("Vehiculo propio:");
         getContentPane().add(Lcar);
-        Lcar.setBounds(10, 220, 100, 16);
+        Lcar.setBounds(20, 310, 140, 16);
 
         VehiculoPropio.add(jRadioButton1);
         jRadioButton1.setText("SI");
         getContentPane().add(jRadioButton1);
-        jRadioButton1.setBounds(160, 210, 60, 28);
+        jRadioButton1.setBounds(170, 300, 60, 28);
 
         VehiculoPropio.add(jRadioButton2);
         jRadioButton2.setText("NO");
         getContentPane().add(jRadioButton2);
-        jRadioButton2.setBounds(250, 210, 60, 28);
+        jRadioButton2.setBounds(260, 300, 60, 28);
         getContentPane().add(TFnombre);
-        TFnombre.setBounds(160, 60, 150, 24);
+        TFnombre.setBounds(170, 150, 150, 24);
 
         TFedad.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -86,9 +88,16 @@ public class Formulario extends javax.swing.JFrame {
             }
         });
         getContentPane().add(TFedad);
-        TFedad.setBounds(160, 110, 150, 24);
+        TFedad.setBounds(170, 200, 150, 24);
         getContentPane().add(TFemail);
-        TFemail.setBounds(160, 160, 150, 24);
+        TFemail.setBounds(170, 250, 150, 24);
+
+        jLabel2.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
+        jLabel2.setText("FORMULARIOS");
+        getContentPane().add(jLabel2);
+        jLabel2.setBounds(90, 20, 190, 50);
+        getContentPane().add(jSeparator1);
+        jSeparator1.setBounds(0, 78, 350, 10);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -114,20 +123,21 @@ public class Formulario extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Formulario.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Formularios.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Formulario.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Formularios.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Formulario.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Formularios.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Formulario.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Formularios.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Formulario().setVisible(true);
+                new Formularios().setVisible(true);
             }
         });
     }
@@ -138,12 +148,14 @@ public class Formulario extends javax.swing.JFrame {
     private javax.swing.JLabel Lemail;
     private javax.swing.JLabel Lnombre;
     private javax.swing.JLabel Lnumencuesta;
+    private javax.swing.JLabel Lnumencuesta2;
     private javax.swing.JTextField TFedad;
     private javax.swing.JTextField TFemail;
     private javax.swing.JTextField TFnombre;
     private javax.swing.ButtonGroup VehiculoPropio;
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JRadioButton jRadioButton1;
     private javax.swing.JRadioButton jRadioButton2;
+    private javax.swing.JSeparator jSeparator1;
     // End of variables declaration//GEN-END:variables
 }

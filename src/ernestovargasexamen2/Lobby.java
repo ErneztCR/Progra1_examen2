@@ -27,6 +27,7 @@ public class Lobby extends javax.swing.JFrame {
         Breporteencuesta = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
+        jSeparator1 = new javax.swing.JSeparator();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setLocationByPlatform(true);
@@ -43,13 +44,18 @@ public class Lobby extends javax.swing.JFrame {
         Bnuevaencuesta.setBounds(50, 170, 200, 120);
 
         Breporteencuesta.setText("REPORTE DE ENCUESTA");
+        Breporteencuesta.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BreporteencuestaActionPerformed(evt);
+            }
+        });
         getContentPane().add(Breporteencuesta);
         Breporteencuesta.setBounds(410, 170, 210, 120);
 
         jLabel1.setFont(new java.awt.Font("Dialog", 0, 36)); // NOI18N
         jLabel1.setText("SISTEMA DE TOMA DE ENCUESTA");
         getContentPane().add(jLabel1);
-        jLabel1.setBounds(40, 40, 610, 70);
+        jLabel1.setBounds(50, 20, 610, 70);
 
         jPanel1.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
@@ -66,16 +72,23 @@ public class Lobby extends javax.swing.JFrame {
 
         getContentPane().add(jPanel1);
         jPanel1.setBounds(170, 330, 340, 250);
+        getContentPane().add(jSeparator1);
+        jSeparator1.setBounds(0, 110, 700, 10);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void BnuevaencuestaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BnuevaencuestaActionPerformed
-        Formulario form = new Formulario();
-        //form.setSize(275,270);
+        Formularios form = new Formularios();
         form.setVisible(true);
         this.hide();
     }//GEN-LAST:event_BnuevaencuestaActionPerformed
+
+    private void BreporteencuestaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BreporteencuestaActionPerformed
+        Reportes reporte = new Reportes();
+        reporte.setVisible(true);
+        this.hide();
+    }//GEN-LAST:event_BreporteencuestaActionPerformed
 
     /**
      * @param args the command line arguments
@@ -117,5 +130,6 @@ public class Lobby extends javax.swing.JFrame {
     private javax.swing.JButton Breporteencuesta;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JSeparator jSeparator1;
     // End of variables declaration//GEN-END:variables
 }

@@ -13,6 +13,9 @@ public class ClsEncuesta {
     private static ArrayList<String> nombre = new ArrayList<>();
     private static ArrayList<Integer> edad = new ArrayList<>();
     private static ArrayList<String> email = new ArrayList<>();
+
+    // se crea un arraylist para almacenar los datos de vehiculo propio
+    private static ArrayList<String> vehiculoPropio = new ArrayList<>();
     
     //constructor
     public ClsEncuesta() {
@@ -42,6 +45,19 @@ public class ClsEncuesta {
         return email;
     }
 
+    //get y set para el arraylist de vehiculoPropio
+    public static ArrayList<String> getVehiculoPropio() {
+        return vehiculoPropio;
+    }
+
+    public static void setVehiculoPropio(String vehiculoPropio) {
+        ClsEncuesta.vehiculoPropio.add(vehiculoPropio);
+    }       
+
+    
+
+
+
     public static void setEmail(String email) {
         ClsEncuesta.email.add(email);
     }
@@ -49,9 +65,9 @@ public class ClsEncuesta {
     public
 
     //metodo para calcular la cantidad de encuestas
-    public static int cantidadEncuestas() {
-        return nombre.size();
-    }
+    //public static int cantidadEncuestas() {
+    //    return nombre.size();
+    //}
 
     //metodo para saber si la edad es entre 18 y 50 si es mayor a 50 o menor a 18 debe arrojar un mensaje por JOptionPane
     public static String edad(int edad) {

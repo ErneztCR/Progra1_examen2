@@ -87,7 +87,7 @@ public class Reportes extends javax.swing.JFrame {
         //Lcabtidadsinvechiculo.setText(String.valueOf(ClsEncuesta.cantidadsinvehiculo));
 
         // mostrar cantidad de personas con vehiculo
-        //Lcantidadvehiculos.setText(String.valueOf(ClsEncuesta.cantidadvehiculos));
+        //Lcantidadvehiculos.setText(String.valueOf(ClsEncuesta.getVehiculoPropio));
 
         // mostrar cantidad de personas sin vehiculo
         //Lcabtidadsinvechiculo.setText(String.valueOf(ClsEncuesta.cantidadsinvehiculo));

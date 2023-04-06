@@ -1,7 +1,4 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
+
 package ernestovargasexamen2;
 
 /**
@@ -9,6 +6,8 @@ package ernestovargasexamen2;
  * @author ervargas
  */
 public class Formularios extends javax.swing.JFrame {
+    
+    private int contador = 0; // Declaración del contador
 
     /**
      * Creates new form Formulario
@@ -40,10 +39,11 @@ public class Formularios extends javax.swing.JFrame {
         TFemail = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
         jSeparator1 = new javax.swing.JSeparator();
+        Bguardar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setLocationByPlatform(true);
-        setPreferredSize(new java.awt.Dimension(350, 390));
+        setPreferredSize(new java.awt.Dimension(350, 465));
         getContentPane().setLayout(null);
 
         Lnumencuesta.setText("Numero de encuesta:");
@@ -99,12 +99,31 @@ public class Formularios extends javax.swing.JFrame {
         getContentPane().add(jSeparator1);
         jSeparator1.setBounds(0, 78, 350, 10);
 
+        Bguardar.setText("Guardar informacion");
+        Bguardar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BguardarActionPerformed(evt);
+            }
+        });
+        getContentPane().add(Bguardar);
+        Bguardar.setBounds(100, 360, 150, 40);
+
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void TFedadActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TFedadActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_TFedadActionPerformed
+
+    private void BguardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BguardarActionPerformed
+        
+        // contador para el numero de encuesta
+        contador++;
+        Lnumencuesta2.setText(String.valueOf(contador));
+
+         
+        
+    }//GEN-LAST:event_BguardarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -143,6 +162,7 @@ public class Formularios extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton Bguardar;
     private javax.swing.JLabel Lcar;
     private javax.swing.JLabel Ledad;
     private javax.swing.JLabel Lemail;

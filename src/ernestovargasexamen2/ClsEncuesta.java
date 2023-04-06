@@ -5,7 +5,7 @@ package ernestovargasexamen2;
  *
  * @author ervargas
  */
-public class Encuesta {
+public class ClsEncuesta {
 
     //atributos
     private int numEncuesta;
@@ -15,7 +15,7 @@ public class Encuesta {
     private boolean vehiculoPropio;
 
     //constructor
-    public Encuesta(int numEncuesta, String nombre, int edad, String email, boolean vehiculoPropio) {
+    public ClsEncuesta(int numEncuesta, String nombre, int edad, String email, boolean vehiculoPropio) {
         this.numEncuesta = numEncuesta;
         this.nombre = nombre;
         this.edad = edad;

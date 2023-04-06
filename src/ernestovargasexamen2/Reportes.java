@@ -26,15 +26,20 @@ public class Reportes extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jSeparator1 = new javax.swing.JSeparator();
-        jLabel3 = new javax.swing.JLabel();
+        Lcantidadencuestas = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
+        Lcantidadvehiculos = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
+        Lcabtidadsinvechiculo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setLocationByPlatform(true);
         setPreferredSize(new java.awt.Dimension(470, 295));
+        addWindowListener(new java.awt.event.WindowAdapter() {
+            public void windowActivated(java.awt.event.WindowEvent evt) {
+                formWindowActivated(evt);
+            }
+        });
         getContentPane().setLayout(null);
 
         jLabel1.setText("Cantidad de encuestas:");
@@ -48,28 +53,41 @@ public class Reportes extends javax.swing.JFrame {
         getContentPane().add(jSeparator1);
         jSeparator1.setBounds(10, 80, 460, 2);
 
-        jLabel3.setBorder(javax.swing.BorderFactory.createEtchedBorder());
-        getContentPane().add(jLabel3);
-        jLabel3.setBounds(260, 90, 160, 30);
+        Lcantidadencuestas.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        getContentPane().add(Lcantidadencuestas);
+        Lcantidadencuestas.setBounds(260, 90, 160, 30);
 
         jLabel4.setText("Cantidad de personas con vehiculo:");
         getContentPane().add(jLabel4);
         jLabel4.setBounds(20, 150, 220, 20);
 
-        jLabel5.setBorder(javax.swing.BorderFactory.createEtchedBorder());
-        getContentPane().add(jLabel5);
-        jLabel5.setBounds(260, 140, 160, 30);
+        Lcantidadvehiculos.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        getContentPane().add(Lcantidadvehiculos);
+        Lcantidadvehiculos.setBounds(260, 140, 160, 30);
 
         jLabel6.setText("Cantidad de personas sin vehiculo:");
         getContentPane().add(jLabel6);
         jLabel6.setBounds(20, 210, 220, 20);
 
-        jLabel7.setBorder(javax.swing.BorderFactory.createEtchedBorder());
-        getContentPane().add(jLabel7);
-        jLabel7.setBounds(260, 200, 160, 30);
+        Lcabtidadsinvechiculo.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        getContentPane().add(Lcabtidadsinvechiculo);
+        Lcabtidadsinvechiculo.setBounds(260, 200, 160, 30);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void formWindowActivated(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowActivated
+        // mostrar cantidad de encuestas
+        Lcantidadencuestas.setText(String.valueOf(ErnestoVargasExamen2.cantidadencuestas));
+
+        // mostrar cantidad de personas con vehiculo
+        Lcantidadvehiculos.setText(String.valueOf(ErnestoVargasExamen2.cantidadvehiculos));
+
+        // mostrar cantidad de personas sin vehiculo
+        Lcabtidadsinvechiculo.setText(String.valueOf(ErnestoVargasExamen2.cantidadsinvehiculo));
+
+
+    }//GEN-LAST:event_formWindowActivated
 
     /**
      * @param args the command line arguments
@@ -107,13 +125,13 @@ public class Reportes extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel Lcabtidadsinvechiculo;
+    private javax.swing.JLabel Lcantidadencuestas;
+    private javax.swing.JLabel Lcantidadvehiculos;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
     private javax.swing.JSeparator jSeparator1;
     // End of variables declaration//GEN-END:variables
 }

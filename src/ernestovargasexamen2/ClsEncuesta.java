@@ -71,6 +71,26 @@ public class ClsEncuesta {
         }
     }
 
-    
+    // metodo para contar cuantas personas tienen vehiculo propio
+    public static int vehiculoPropio() {
+        int contador = 0;
+        for (int i = 0; i < nombre.size(); i++) {
+            if (nombre.get(i).equals("Si")) {
+                contador++;
+            }
+        }
+        return contador;
+    }
+
+    // metodo para contar cuantas personas no tienen vehiculo propio
+    public static int vehiculoNoPropio() {
+        int contador = 0;
+        for (int i = 0; i < nombre.size(); i++) {
+            if (nombre.get(i).equals("No")) {
+                contador++;
+            }
+        }
+        return contador;
+    }
         
 }

@@ -16,6 +16,9 @@ public class ClsEncuesta {
 
     // se crea un arraylist para almacenar los datos de vehiculo propio
     private static ArrayList<String> vehiculoPropio = new ArrayList<>();
+
+    // se crea un arraylist para almacenar los datos de persona sin vehiculo
+    private static ArrayList<String> personaSinVehiculo = new ArrayList<>();
     
     //constructor
     public ClsEncuesta() {

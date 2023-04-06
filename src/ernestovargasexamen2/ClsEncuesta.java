@@ -46,6 +46,8 @@ public class ClsEncuesta {
         ClsEncuesta.email.add(email);
     }
 
+    public
+
     //metodo para calcular la cantidad de encuestas
     public static int cantidadEncuestas() {
         return nombre.size();

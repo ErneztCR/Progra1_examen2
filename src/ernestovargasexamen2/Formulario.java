@@ -26,21 +26,76 @@ public class Formulario extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        VehiculoPropio = new javax.swing.ButtonGroup();
+        jLabel1 = new javax.swing.JLabel();
+        Lnumencuesta = new javax.swing.JLabel();
+        Lnombre = new javax.swing.JLabel();
+        Ledad = new javax.swing.JLabel();
+        Lemail = new javax.swing.JLabel();
+        Lcar = new javax.swing.JLabel();
+        jRadioButton1 = new javax.swing.JRadioButton();
+        jRadioButton2 = new javax.swing.JRadioButton();
+        TFnombre = new javax.swing.JTextField();
+        TFedad = new javax.swing.JTextField();
+        TFemail = new javax.swing.JTextField();
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 599, Short.MAX_VALUE)
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 613, Short.MAX_VALUE)
-        );
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setLocationByPlatform(true);
+        setPreferredSize(new java.awt.Dimension(350, 300));
+        getContentPane().setLayout(null);
+
+        jLabel1.setText("Numero de encuesta:");
+        getContentPane().add(jLabel1);
+        jLabel1.setBounds(10, 10, 140, 30);
+
+        Lnumencuesta.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        getContentPane().add(Lnumencuesta);
+        Lnumencuesta.setBounds(160, 10, 150, 30);
+
+        Lnombre.setText("Nombre:");
+        getContentPane().add(Lnombre);
+        Lnombre.setBounds(10, 70, 60, 16);
+
+        Ledad.setText("Edad:");
+        getContentPane().add(Ledad);
+        Ledad.setBounds(10, 120, 31, 16);
+
+        Lemail.setText("Correo electronico:");
+        getContentPane().add(Lemail);
+        Lemail.setBounds(10, 166, 101, 16);
+
+        Lcar.setText("Vehiculo propio:");
+        getContentPane().add(Lcar);
+        Lcar.setBounds(10, 220, 100, 16);
+
+        VehiculoPropio.add(jRadioButton1);
+        jRadioButton1.setText("SI");
+        getContentPane().add(jRadioButton1);
+        jRadioButton1.setBounds(160, 210, 60, 28);
+
+        VehiculoPropio.add(jRadioButton2);
+        jRadioButton2.setText("NO");
+        getContentPane().add(jRadioButton2);
+        jRadioButton2.setBounds(250, 210, 60, 28);
+        getContentPane().add(TFnombre);
+        TFnombre.setBounds(160, 60, 150, 24);
+
+        TFedad.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                TFedadActionPerformed(evt);
+            }
+        });
+        getContentPane().add(TFedad);
+        TFedad.setBounds(160, 110, 150, 24);
+        getContentPane().add(TFemail);
+        TFemail.setBounds(160, 160, 150, 24);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void TFedadActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TFedadActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_TFedadActionPerformed
 
     /**
      * @param args the command line arguments
@@ -78,5 +133,17 @@ public class Formulario extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel Lcar;
+    private javax.swing.JLabel Ledad;
+    private javax.swing.JLabel Lemail;
+    private javax.swing.JLabel Lnombre;
+    private javax.swing.JLabel Lnumencuesta;
+    private javax.swing.JTextField TFedad;
+    private javax.swing.JTextField TFemail;
+    private javax.swing.JTextField TFnombre;
+    private javax.swing.ButtonGroup VehiculoPropio;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JRadioButton jRadioButton1;
+    private javax.swing.JRadioButton jRadioButton2;
     // End of variables declaration//GEN-END:variables
 }

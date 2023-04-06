@@ -61,5 +61,16 @@ public class ClsEncuesta {
             return "La edad es menor a 18";
         }
     }
+
+    // metodo para revisar que todos los espacios se llenaron
+    public static boolean revisarEspacios(String nombre, int edad, String email) {
+        if (nombre.equals("") || edad == 0 || email.equals("")) {
+            return false;
+        } else {
+            return true;
+        }
+    }
+
+    
         
 }

@@ -78,13 +78,13 @@ public class Reportes extends javax.swing.JFrame {
 
     private void formWindowActivated(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowActivated
         // mostrar cantidad de encuestas
-        Lcantidadencuestas.setText(String.valueOf(ErnestoVargasExamen2.cantidadencuestas));
+        //Lcantidadencuestas.setText(String.valueOf(ClsEncuesta.get));
 
         // mostrar cantidad de personas con vehiculo
-        Lcantidadvehiculos.setText(String.valueOf(ErnestoVargasExamen2.cantidadvehiculos));
+        //Lcantidadvehiculos.setText(String.valueOf(ErnestoVargasExamen2.cantidadvehiculos));
 
         // mostrar cantidad de personas sin vehiculo
-        Lcabtidadsinvechiculo.setText(String.valueOf(ErnestoVargasExamen2.cantidadsinvehiculo));
+        //Lcabtidadsinvechiculo.setText(String.valueOf(ErnestoVargasExamen2.cantidadsinvehiculo));
 
 
     }//GEN-LAST:event_formWindowActivated
